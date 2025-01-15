@@ -50,10 +50,16 @@ df6_filtered = df6[(df6['Siblings/Spouses Aboard'] > 0) & (df6['Parents/Children
 df7 = pd.read_csv(file_path)
 dfAvrFareLast = df7['Fare'].mean()
 
-print(f"Average Fare per Sex:\n{df2_avrFarePerSex}\n")
-print(f"Average Fare per Sex and Pclass:\n{dfAvrFarePerSexAndClass}\n")
-print(f"Average Fare per Survived:\n{dfAvrFarePerSurvivor}\n")
-print(f"Record counts - Male: {male_count}, Female: {female_count}, Child: {child_count}\n")
-print(f"Those who have siblings, spouses, parents or children aboard: {passengers_with_family}")
-print(f"Filtered off those who had both siblings/spouses and parents/children: {df6_filtered}")
-print(f"Average fare paid by the people in the previous dataset: {dfAvrFareLast}")
+
+
+def main():
+    print(f"Average Fare per Sex:\n{df2_avrFarePerSex}\n")
+    print(f"Average Fare per Sex and Pclass:\n{dfAvrFarePerSexAndClass}\n")
+    print(f"Average Fare per Survived:\n{dfAvrFarePerSurvivor}\n")
+    print(f"Record counts - Male: {male_count}, Female: {female_count}, Child: {child_count}\n")
+    print(f"Those who have siblings, spouses, parents or children aboard: {passengers_with_family}")
+    print(f"Filtered off those who had both siblings/spouses and parents/children: {df6_filtered}")
+    print(f"Average fare paid by the people in the previous dataset: {dfAvrFareLast}")
+
+if __name__ == "__main__":
+    main()
